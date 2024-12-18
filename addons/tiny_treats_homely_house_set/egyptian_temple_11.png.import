@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://di0afj0ytheal"
+path.s3tc="res://.godot/imported/egyptian_temple_11.png-e07b4d2e189c4c7c44a3506530dd5daf.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "217f09267abfbcfdc6263bb0b1024a2c"
+}
+
+[deps]
+
+source_file="res://addons/tiny_treats_homely_house_set/egyptian_temple_11.png"
+dest_files=["res://.godot/imported/egyptian_temple_11.png-e07b4d2e189c4c7c44a3506530dd5daf.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://addons/tiny_treats_homely_house_set/egyptian_temple_11.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

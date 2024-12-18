@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://csbqc7tw1m5wy"]
+
+[ext_resource type="Script" path="res://scripts/object/item/weapon/weapon.gd" id="1_jhenc"]
+[ext_resource type="Script" path="res://scripts/object/item/weapon/fire_modes/auto.gd" id="2_uly0p"]
+[ext_resource type="PackedScene" uid="uid://bptv7k4s181w3" path="res://scenes/models/weapons/uzi.tscn" id="3_rxemv"]
+
+[sub_resource type="Resource" id="Resource_o1ry2"]
+script = ExtResource("2_uly0p")
+
+[node name="Uzi" type="Node3D" node_paths=PackedStringArray("bullet_pivot")]
+transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0, 0)
+script = ExtResource("1_jhenc")
+damage = 15
+fire_mode = SubResource("Resource_o1ry2")
+bullet_pivot = NodePath("BulletPivot")
+firerate = 400.0
+bulleet_collision_mask = 2
+
+[node name="uzi" parent="." instance=ExtResource("3_rxemv")]
+transform = Transform3D(-0.5227, 0, -4.56959e-08, 0, 0.5227, 0, 4.56959e-08, 0, -0.5227, 0.277884, 0.578724, 0.276488)
+
+[node name="BulletPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244256, 2.11666, -1.92704)

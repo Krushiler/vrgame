@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cu602q0qfsj4e"]
+
+[ext_resource type="Shader" uid="uid://bdlqlsupsb1qj" path="res://shaders/blood.tres" id="1_7c3sx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cftti"]
+render_priority = 0
+shader = ExtResource("1_7c3sx")
+
+[sub_resource type="Curve" id="Curve_rx1px"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7bic5"]
+curve = SubResource("Curve_rx1px")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qlvjl"]
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 6.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_7bic5")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ug1ml"]
+
+[sub_resource type="Skin" id="Skin_idmd3"]
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+material_override = SubResource("ShaderMaterial_cftti")
+emitting = false
+amount = 16
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_qlvjl")
+draw_pass_1 = SubResource("QuadMesh_ug1ml")
+draw_skin = SubResource("Skin_idmd3")

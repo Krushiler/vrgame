@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf8g8a32t634l"]
+
+[ext_resource type="Script" path="res://scripts/object/item/weapon/weapon.gd" id="1_oojv2"]
+[ext_resource type="Script" path="res://scripts/object/item/weapon/fire_modes/single.gd" id="2_eqj36"]
+[ext_resource type="PackedScene" uid="uid://kwnfynenwtgm" path="res://scenes/models/weapons/pistol.tscn" id="2_grc3b"]
+
+[sub_resource type="Resource" id="Resource_c6nlo"]
+script = ExtResource("2_eqj36")
+
+[node name="Pistol" type="Node3D" node_paths=PackedStringArray("bullet_pivot")]
+transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0, 0)
+script = ExtResource("1_oojv2")
+damage = 35
+fire_mode = SubResource("Resource_c6nlo")
+bullet_pivot = NodePath("BulletPivot")
+firerate = 150.0
+bulleet_collision_mask = 2
+
+[node name="Pistol2" parent="." instance=ExtResource("2_grc3b")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="BulletPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24989, 2.04912, -1.16921)

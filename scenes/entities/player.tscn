@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckuin0bgyuex3"]
+
+[ext_resource type="Script" path="res://scripts/entities/character/character.gd" id="1_lgdkp"]
+[ext_resource type="Script" path="res://scripts/entities/character/state_machine.gd" id="2_rm5ti"]
+[ext_resource type="Script" path="res://scripts/entities/character/state/moving.gd" id="3_2tmgh"]
+[ext_resource type="Script" path="res://scripts/entities/character/state/dead.gd" id="4_a7r51"]
+[ext_resource type="Script" path="res://scripts/combat/hurtbox.gd" id="5_ihsdk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3xr2s"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3k4ga"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kxpcu"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0706523, 0)
+floor_max_angle = 1.39626
+script = ExtResource("1_lgdkp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3xr2s")
+
+[node name="HeadPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.662769, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_3k4ga")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_rm5ti")
+
+[node name="Moving" type="Node" parent="StateMachine"]
+script = ExtResource("3_2tmgh")
+
+[node name="Dead" type="Node" parent="StateMachine"]
+script = ExtResource("4_a7r51")
+
+[node name="HurtBox" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_ihsdk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
+shape = SubResource("CapsuleShape3D_kxpcu")

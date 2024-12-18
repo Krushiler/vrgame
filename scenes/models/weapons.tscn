@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://8x5xtnou8xcc"]
+
+[ext_resource type="PackedScene" uid="uid://i81y2e5h3lrd" path="res://assets/models/raw/voxel_gun_pack.glb" id="1_qaul8"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_qaul8")]

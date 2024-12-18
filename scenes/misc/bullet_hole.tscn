@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://lrwhr2rbpjlm"]
+
+[ext_resource type="Texture2D" uid="uid://b4kkxukewbywg" path="res://assets/sprites/bulle_hole.png" id="1_q3swj"]
+[ext_resource type="Script" path="res://scripts/object/misc/bullet_hole.gd" id="2_8gbfu"]
+
+[node name="BulletHole" type="Sprite3D"]
+transform = Transform3D(0.0216993, 0, 0, 0, 0.0216993, 0, 0, 0, 1, 0, 0, 0.0482687)
+texture = ExtResource("1_q3swj")
+script = ExtResource("2_8gbfu")
