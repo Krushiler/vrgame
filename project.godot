@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 EventBus="*res://scripts/event_bus/event_bus.gd"
 HitHandler="*res://scripts/event_bus/handlers/hit_handler.gd"
+DeathHandler="*res://scripts/event_bus/handlers/death_handler.gd"
 
 [debug]
 

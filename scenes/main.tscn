@@ -138,3 +138,20 @@ shape = SubResource("ConcavePolygonShape3D_uollg")
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("4_g2bqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88117, 0, -18.8321)
+
+[node name="SpawnPoints" type="Node" parent="."]
+
+[node name="Node3D" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2903, 1.36929, -7.33285)
+
+[node name="Node3D2" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7085, 1.36929, -32.3765)
+
+[node name="Node3D3" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07831, 1.36929, -44.9994)
+
+[node name="Node3D4" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23636, 1.36929, -23.6058)
+
+[node name="Node3D5" type="Node3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.82321, 1.36929, 0.0170269)

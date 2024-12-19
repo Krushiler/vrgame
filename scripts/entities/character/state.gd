@@ -8,4 +8,7 @@ func init(character: Character):
 	self.character = character
 		
 func on_damage_taken(damage: int):
-	pass
+	character.health -= damage
+	if character.health <= 0:
+		change_state('dead')
+		EventBus.player_died.emit(character)

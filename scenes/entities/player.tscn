@@ -8,7 +8,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3xr2s"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_3k4ga"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_f0h1r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kxpcu"]
 
@@ -24,7 +24,7 @@ shape = SubResource("CapsuleShape3D_3xr2s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.662769, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_3k4ga")
+mesh = SubResource("CapsuleMesh_f0h1r")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("2_rm5ti")
