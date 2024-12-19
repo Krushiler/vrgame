@@ -8,7 +8,7 @@
 script = ExtResource("2_uly0p")
 
 [node name="Uzi" type="Node3D" node_paths=PackedStringArray("bullet_pivot")]
-transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0, 0)
+transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, -0.419297, 0)
 script = ExtResource("1_jhenc")
 damage = 15
 fire_mode = SubResource("Resource_o1ry2")
@@ -17,7 +17,7 @@ firerate = 400.0
 bulleet_collision_mask = 2
 
 [node name="uzi" parent="." instance=ExtResource("3_rxemv")]
-transform = Transform3D(-0.5227, 0, -4.56959e-08, 0, 0.5227, 0, 4.56959e-08, 0, -0.5227, 0.277884, 0.578724, 0.276488)
+transform = Transform3D(-0.5227, 0, -4.56959e-08, 0, 0.5227, 0, 4.56959e-08, 0, -0.5227, 0, 0, 0)
 
 [node name="BulletPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244256, 2.11666, -1.92704)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0231156, 1.52428, -2.17015)

@@ -2,9 +2,6 @@ extends Node3D
 
 @export var player: Character
 @export var camera: Camera3D
-
-func _ready() -> void:
-	Input.mouse_mode = Input.MouseMode.MOUSE_MODE_CAPTURED
 	
 @export var mouse_sensitivity = 0.25
 	
@@ -13,6 +10,8 @@ func _input(event):
 		camera.rotate_x(-event.relative.y * mouse_sensitivity * 0.01)
 		player.rotate_y(-event.relative.x * mouse_sensitivity * 0.01)
 		camera.global_rotation.x = clampf(camera.rotation.x, -deg_to_rad(90), deg_to_rad(90))
+	elif event is InputEventKey and event.is_action_pressed("respawn"):
+		player.state_machine.on_damage_taken(player.health)
 
 func _physics_process(delta: float) -> void:
 	var x_input = float(Input.is_action_pressed("move_right")) - float(Input.is_action_pressed("move_left"))

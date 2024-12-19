@@ -6,7 +6,6 @@
 resource_name = "Guns"
 transparency = 4
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_e3vas")
 emission_enabled = true
 
@@ -43,7 +42,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_frewj")
 
 [node name="uzi" type="Node3D"]
-transform = Transform3D(0.5227, 0, 0, 0, 0.5227, 0, 0, 0, 0.5227, 3.74, -0.2653, -0.0910034)
+transform = Transform3D(0.5227, 0, 0, 0, 0.5227, 0, 0, 0, 0.5227, 0, 0, 0)
 
 [node name="default" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_nt13w")
